@@ -1,12 +1,14 @@
 ## Unempluzz.ai, AI Job Aggregator
-
+```
 My 1 day project because I recently bought a Claude Pro subscription, I burned my daily session limit making this...
 **This is supposed to be ran locally! There are no security considerations for this to be deployed live anywhere!!!**
 
 Uses LLMs to web-scrape job postings and collect ones relating to the user's industry
 Achieved through Apify's web scraping service and Claude's apis
+```
 
 ## Features
+```
 -> User can save certain links to scrape, cherry picking certain job postings
 -> User can also upload their resume and input certain keywords for the scraper to use
 -> Job posted are optimized through: category detection & job scoring
@@ -14,6 +16,7 @@ Achieved through Apify's web scraping service and Claude's apis
 -> "High match" category is specifically for job postings that mostly align with user's resume/keywords
 -> Websites can be queried automatically at 6am daily
 -> Discord webhooks for LLM token usage warnings and new job postings
+```
 
 # Initial Setup
 ```
