@@ -1,0 +1,18 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npx create-next-app@latest . --typescript --tailwind --eslint --app --src-dir --import-alias \"@/*\" --use-npm --turbopack)",
+      "Bash(mkdir -p ref)",
+      "Bash(mv *.PNG ref/)",
+      "Bash(npx create-next-app@latest unempluzzed-temp --typescript --tailwind --eslint --app --src-dir --import-alias \"@/*\" --use-npm --turbopack)",
+      "Bash(rm -rf unempluzzed-temp)",
+      "Bash(printf \"no\\\\nno\\\\n\")",
+      "Bash(yes \"no\")",
+      "Bash(cp -r unempluzzed-temp/* unempluzzed.ai/)",
+      "Bash(cp unempluzzed-temp/.gitignore unempluzzed.ai/)",
+      "Bash(cp -r unempluzzed-temp/.git unempluzzed.ai/)",
+      "Bash(cp unempluzzed-temp/.eslintrc.json unempluzzed.ai/)",
+      "Bash(npx shadcn@latest init -d)"
+    ]
+  }
+}
