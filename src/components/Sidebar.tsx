@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { LayoutDashboard, Briefcase } from "lucide-react";
@@ -16,7 +17,10 @@ export function Sidebar() {
   return (
     <aside className="w-64 border-r bg-card flex flex-col">
       <div className="p-6 border-b">
-        <h1 className="text-xl font-bold tracking-tight">unempluzzed.ai</h1>
+        <div className="flex items-center gap-2">
+          <Image src="/elephant.svg" alt="unempluzzed.ai" width={32} height={32} />
+          <h1 className="text-xl font-bold tracking-tight">unempluzzed.ai</h1>
+        </div>
         <p className="text-xs text-muted-foreground mt-1">
           AI Job Aggregator
         </p>
