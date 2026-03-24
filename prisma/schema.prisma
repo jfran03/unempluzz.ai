@@ -1,0 +1,86 @@
+generator client {
+  provider = "prisma-client"
+  output   = "../src/generated/prisma"
+}
+
+datasource db {
+  provider = "sqlite"
+}
+
+model Job {
+  id             String    @id @default(cuid())
+  title          String
+  company        String
+  description    String
+  qualifications String?
+  url            String    @unique
+
+  // Location
+  province String?
+  city     String?
+  address  String?
+
+  // Classification
+  jobType       String? // e.g. "Software Engineering", "Marketing"
+  workplaceType String? // "remote" | "in-person" | "hybrid"
+  jobDuration   String? // "permanent" | "co-op" | "internship"
+  jobCommitment String? // "full-time" | "part-time" | "casual"
+
+  // Dates
+  applicationDeadline DateTime?
+  scrapedAt           DateTime  @default(now())
+
+  // User interaction
+  applied       Boolean   @default(false)
+  appliedAt     DateTime?
+  viewedAt      DateTime?
+  matchFeedback String?   // "up" | "down" | null
+
+  // Source
+  sourceWebsite String?
+
+  @@index([applied])
+  @@index([applicationDeadline])
+  @@index([scrapedAt])
+}
+
+model Keyword {
+  id    String @id @default(cuid())
+  value String @unique
+}
+
+model Website {
+  id      String  @id @default(cuid())
+  url     String  @unique
+  name    String?
+  enabled Boolean @default(true)
+}
+
+model Resume {
+  id            String   @id @default(cuid())
+  filename      String
+  filePath      String
+  extractedText String
+  uploadedAt    DateTime @default(now())
+}
+
+model ScrapeLog {
+  id          String    @id @default(cuid())
+  startedAt   DateTime  @default(now())
+  completedAt DateTime?
+  status      String // "running" | "completed" | "failed"
+  jobsFound   Int       @default(0)
+  jobsNew     Int       @default(0)
+  error       String?
+
+  // Cost tracking
+  claudeInputTokens  Int    @default(0)
+  claudeOutputTokens Int    @default(0)
+  claudeCostUsd      Float  @default(0)
+  apifyCostUsd       Float  @default(0)
+}
+
+model Setting {
+  key   String @id
+  value String
+}

@@ -12,7 +12,26 @@
       "Bash(cp unempluzzed-temp/.gitignore unempluzzed.ai/)",
       "Bash(cp -r unempluzzed-temp/.git unempluzzed.ai/)",
       "Bash(cp unempluzzed-temp/.eslintrc.json unempluzzed.ai/)",
-      "Bash(npx shadcn@latest init -d)"
+      "Bash(npx shadcn@latest init -d)",
+      "Bash(npm install:*)",
+      "Bash(npx prisma:*)",
+      "Bash(npx shadcn@latest add card input label badge table sheet tabs dialog separator textarea toast dropdown-menu -y)",
+      "Bash(npx shadcn@latest add card input label badge table sheet tabs dialog separator textarea sonner dropdown-menu -y)",
+      "Bash(npx next:*)",
+      "Bash(npm list:*)",
+      "Bash(node -e \"const m = require\\(''pdf-parse''\\); console.log\\(typeof m, Object.keys\\(m\\)\\)\")",
+      "Bash(node -e \"const m = require\\(''C:/Users/jerom/OneDrive/Desktop/WebsiteProjects/unempluzzed.ai/node_modules/pdf-parse''\\); console.log\\(typeof m, Object.keys\\(m\\)\\)\")",
+      "Bash(node:*)",
+      "Bash(PRISMA_USER_CONSENT_FOR_DANGEROUS_AI_ACTION=\"yes\" npx prisma db push --force-reset)",
+      "Bash(source .env)",
+      "Bash(node -e \":*)",
+      "Bash(grep -r \"dangerouslySetInnerHTML\\\\|innerHTML\\\\|eval\\\\|Function\\(\" /c/Users/jerom/OneDrive/Desktop/WebsiteProjects/unempluzzed.ai/src --include=*.ts --include=*.tsx)",
+      "Bash(grep -r \"req.json\\\\|formData\\\\|query\\\\|params\" /c/Users/jerom/OneDrive/Desktop/WebsiteProjects/unempluzzed.ai/src/app/api --include=*.ts -A 3)",
+      "Bash(grep -r \"NEXT_PUBLIC\\\\|process\\\\.env\\\\|localStorage\\\\|sessionStorage\" /c/Users/jerom/OneDrive/Desktop/WebsiteProjects/unempluzzed.ai/src --include=*.ts --include=*.tsx)",
+      "Bash(grep -r \"password\\\\|secret\\\\|token\\\\|auth\\\\|private\\\\|secret\" /c/Users/jerom/OneDrive/Desktop/WebsiteProjects/unempluzzed.ai/src --include=*.ts --include=*.tsx)",
+      "Bash(ls:*)",
+      "Bash(xargs grep:*)",
+      "Bash(grep -r \"redirect\\\\|window\\\\.location\\\\|location\\\\.href\" /c/Users/jerom/OneDrive/Desktop/WebsiteProjects/unempluzzed.ai/src --include=*.ts --include=*.tsx)"
     ]
   }
 }
